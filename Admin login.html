@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin login</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="Services.html">Services</a></li> 
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="Admin login.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="form-value">
+            <form onsubmit="return login()" method="post">
+                <h2>Login</h2>
+                <div class="inputbox">
+                    <ion-icon></ion-icon>
+                    <input type="text" required id="username" placeholder="Username">
+                </div>
+                <div class="inputbox">
+                    <ion-icon></ion-icon>
+                    <input type="password" required id="password" placeholder="Password">
+                </div>
+               
+                <button type="submit">Log in</button>
+            </form>
+        </div>
+        
+            
+        </div>
+    </section>
+
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Replace these with your actual credentials
+            var validUsername = "Daniel";
+            var validPassword = "Bekker";
+
+            if (username === validUsername && password === validPassword) {
+                // Redirect to the admin page if credentials are valid
+                window.location.href = "admin.html";
+                return false; // Prevent form submission
+            } else {
+                alert("Invalid username or password");
+                return false; // Prevent form submission
+            }
+        }
+    </script>
+</body>
+</html>
